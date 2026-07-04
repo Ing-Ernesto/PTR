@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plano Interactivo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>🌊 PLANO INFORMATIVO DE LA PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES DEL
+CAMPUS PAUTE-YUMACAY</h1>
+    <p>Explora el funcionamiento interactivo de la planta</p>
+  </header>
+
+  <div class="container">
+    <!-- Sección general -->
+    <div class="info-general">
+      <h2>¿Cómo funciona la Planta?</h2>
+      <p>Esta planta trata aguas residuales domésticas mediante un sistema combinado de procesos anaerobios, humedales y secado de lodos.</p>
+      <ol>
+        <li><strong>Entrada</strong>: Recibe las aguas residuales.</li>
+        <li><strong>Fosa Séptica + Filtro Anaerobio</strong>: Tratamiento primario y secundario.</li>
+        <li><strong>Humedal Artificial</strong>: Tratamiento terciario.</li>
+        <li><strong>Lecho de Secado</strong>: Deshidratación de lodos.</li>
+      </ol>
+      <p><strong>Objetivo:</strong> Reducir la contaminación antes de devolver el agua al medio ambiente.</p>
+    </div>
+
+    <div class="map-wrapper" id="mapWrapper">
+      <div class="controls">
+        <button onclick="zoomIn()">🔍 + Zoom</button>
+        <button onclick="zoomOut()">🔍 - Zoom</button>
+        <button onclick="resetView()">Reset Vista</button>
+      </div>
+      
+      <div class="map-inner" id="mapInner">
+        <img src="assets/pagina_3.png" id="plano" alt="Plano General">
+
+        <div class="hotspot" style="left: 38.5%; top: 116.8%;" onclick="showInfo(0)">Sedimentadores</div>
+        <div class="hotspot" style="left: 43.6173%; top: 92%;" onclick="showInfo(1)">Humedal Artificial</div>
+        <div class="hotspot" style="left: 4%; top: 122.5%;" onclick="showInfo(2)">Entrada Efluente</div>
+        <div class="hotspot" style="left: 30.361%; top: 152%;" onclick="showInfo(3)">Lecho de Secado</div>
+        <div class="hotspot" style="left: 2.5%; top: 91%;" onclick="showInfo(4)">Filtro de Grava</div>
+        <div class="hotspot" style="left: 41.8%; top: 56.59%;" onclick="showInfo(5)">Salida</div>
+        <div class="hotspot" style="left: 33%; top: 7.5%;" onclick="showInfo(6)">Efluente</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <h2 id="modal-title"></h2>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
