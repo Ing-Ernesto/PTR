@@ -14,15 +14,15 @@ header {
 
 .container {
   max-width: 1400px;
-  margin: 20px auto;
-  padding: 15px;
+  margin: 15px auto;
+  padding: 0 10px;
 }
 
 .info-general {
   background: white;
   padding: 20px;
   border-radius: 12px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
@@ -32,7 +32,9 @@ header {
   border-radius: 12px;
   overflow: hidden;
   background: #f0f0f0;
-  height: 82vh;
+  height: 70vh;
+  min-height: 400px;
+  touch-action: none;     /* Importante para móviles */
 }
 
 .map-inner {
@@ -50,27 +52,27 @@ header {
 
 .hotspot {
   position: absolute;
-  background: rgba(0, 119, 190, 0.45);
+  background: rgba(0, 119, 190, 0.92);
   color: white;
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
   text-align: center;
-  border: 2px solid rgba(255,255,255,0.8);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  min-width: 170px;
+  border: 3px solid rgba(255,255,255,0.8);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  min-width: 140px;
+  font-size: 14px;
   z-index: 10;
-  transition: all 0.3s ease;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  transition: all 0.2s;
+  user-select: none;
 }
 
 /* Al pasar el cursor (menos transparente y más visible) */
 .hotspot:hover {
-  background: rgba(0, 180, 80, 0.85);      /* Más opaco y verde resaltado */
+  background: rgba(0, 180, 80, 0.95);      /* Más opaco y verde resaltado */
   border-color: white;
   transform: scale(1.08);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
 
 .hotspot::after {
@@ -79,25 +81,27 @@ header {
   left: 50%;
   top: 100%;
   transform: translateX(-50%);
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 14px solid #0077be;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid #0077be;
 }
 
 .controls {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 12px;
+  right: 12px;
   z-index: 20;
   background: white;
-  padding: 8px;
+  padding: 6px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: flex;
+  gap: 5px;
 }
 
 button {
-  margin: 3px;
   padding: 8px 12px;
+  font-size: 14px;
 }
 
 .modal {
@@ -117,7 +121,7 @@ button {
   max-width: 700px;
   padding: 25px;
   border-radius: 12px;
-  max-height: 90vh;
+  max-height: 85vh;
   overflow-y: auto;
 }
 
@@ -128,4 +132,17 @@ button {
   font-size: 35px;
   cursor: pointer;
   color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hotspot {
+    font-size: 13px;
+    padding: 7px 10px;
+    min-width: 120px;
+  }
+  
+  .map-wrapper {
+    height: 65vh;
+  }
 }
