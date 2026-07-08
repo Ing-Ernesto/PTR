@@ -4,33 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plano Interactivo PTR</title>
+  <!-- FAVICON / ÍCONO DE PESTAÑA -->
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <header>
-    <h1>🌊 PLANO INFORMATIVO DE LA PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES DEL
-CAMPUS PAUTE-YUGMACAY</h1>
+    <h1>🌊 PLANO INFORMATIVO DE LA PLANTA DE TRATAMIENTO DE AGUAS RESIDUALES</h1>
+    <h2>CAMPUS PAUTE - YUGMUCAY</h2>
     <p>Explora el funcionamiento interactivo de la planta</p>
   </header>
 
   <div class="container">
-    <!-- Sección general -->
+    
+    <!-- Sección Informativa -->
     <div class="info-general">
       <h2>¿Cómo funciona la Planta?</h2>
       <p>Esta planta trata aguas residuales domésticas mediante un sistema combinado de procesos anaerobios, humedales y secado de lodos.</p>
+      
       <ol>
         <li><strong>Entrada de Efluente</strong>: Punto por donde ingresan las aguas residuales al sistema.</li>
         <li><strong>Sedimentadores</strong>: Separan los sólidos del agua por gravedad.</li>
         <li><strong>Filtro de Grava</strong>: Retiene partículas finas y mejora la calidad del agua.</li>
         <li><strong>Lecho de Secado</strong>: Reduce la humedad de los lodos para facilitar su manejo.</li>
-        <li><strong>Humedal Artificial</strong>:Depura el agua mediante plantas y microorganismos.</li>
-        <li><strong>Salida</strong>:  Punto donde el agua tratada sale del sistema.</li>
-        <li><strong>Efluente (río)</strong>: Agua tratada que se descarga de forma segura al cuerpo de agua..</li>
+        <li><strong>Humedal Artificial</strong>: Depura el agua mediante plantas y microorganismos.</li>
+        <li><strong>Salida</strong>: Punto donde el agua tratada sale del sistema.</li>
+        <li><strong>Efluente (río)</strong>: Agua tratada que se descarga de forma segura al cuerpo de agua.</li>
       </ol>
+      
       <p><strong>Objetivo:</strong> Reducir la contaminación antes de devolver el agua al medio ambiente.</p>
     </div>
 
+    <!-- Mapa Interactivo -->
     <div class="map-wrapper" id="mapWrapper">
       <div class="controls">
         <button onclick="zoomIn()">🔍 + Zoom</button>
@@ -41,13 +48,14 @@ CAMPUS PAUTE-YUGMACAY</h1>
       <div class="map-inner" id="mapInner">
         <img src="assets/pagina_3.png" id="plano" alt="Plano General">
 
-        <div class="hotspot" style="left: 38.5%; top: 116.8%;" onclick="showInfo(0)">Sedimentadores</div>
-        <div class="hotspot" style="left: 43.6173%; top: 92%;" onclick="showInfo(1)">Humedal Artificial</div>
-        <div class="hotspot" style="left: 4%; top: 122.5%;" onclick="showInfo(2)">Entrada Efluente</div>
-        <div class="hotspot" style="left: 30.361%; top: 152%;" onclick="showInfo(3)">Lecho de Secado</div>
-        <div class="hotspot" style="left: 2.5%; top: 91%;" onclick="showInfo(4)">Filtro de Grava</div>
-        <div class="hotspot" style="left: 41.8%; top: 56.59%;" onclick="showInfo(5)">Salida</div>
-        <div class="hotspot" style="left: 33%; top: 7.5%;" onclick="showInfo(6)">Efluente</div>
+        <!-- Hotspots -->
+        <div class="hotspot" style="left: 46%; top: 63.8%;" onclick="showInfo(0)">Sedimentadores</div>
+        <div class="hotspot" style="left: 51.5%; top: 51.5%;" onclick="showInfo(1)">Humedal Artificial</div>
+        <div class="hotspot" style="left: 0.3%; top: 67%;" onclick="showInfo(2)">Entrada Efluente</div>
+        <div class="hotspot" style="left: 37.5%; top: 82.5%;" onclick="showInfo(3)">Lecho de Secado</div>
+        <div class="hotspot" style="left: 0.3%; top: 49%;" onclick="showInfo(4)">Filtro de Grava</div>
+        <div class="hotspot" style="left: 49.5%; top: 32%;" onclick="showInfo(5)">Salida</div>
+        <div class="hotspot" style="left: 41.1%; top: 7%;" onclick="showInfo(6)">Efluente</div>
       </div>
     </div>
   </div>
